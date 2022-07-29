@@ -1,0 +1,72 @@
+// =================================================
+@for $i from 1 through 5 {
+
+  .pt-#{$i} {
+    padding-top: #{$i/2}rem;
+  }
+  .pb-#{$i} {
+    padding-bottom: #{$i/2}rem;
+  }
+  .pl-#{$i} {
+    padding-left: #{$i/2}rem;
+  }
+  .pr-#{$i} {
+    padding-right: #{$i/2}rem;
+  }
+  .px-#{$i} {
+    padding-right: #{$i/2}rem;
+    padding-left: #{$i/2}rem;
+  }
+  .py-#{$i} {
+    padding-top: #{$i/2}rem;
+    padding-bottom: #{$i/2}rem;
+  }
+  .mt-#{$i} {
+    margin-top: #{$i/2}rem;
+  }
+  .mb-#{$i} {
+    margin-bottom: #{$i/2}rem;
+  }
+  .ml-#{$i} {
+    margin-left: #{$i/2}rem;
+  }
+  .mr-#{$i} {
+    margin-right: #{$i/2}rem;
+  }
+  .mx-#{$i} {
+    margin-right: #{$i/2}rem;
+    margin-left: #{$i/2}rem;
+  }
+  .my-#{$i} {
+    margin-top: #{$i/2}rem;
+    margin-bottom: #{$i/2}rem;
+  }
+}
+// =================================================
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+.text-left{
+  text-align: left;
+}
+// =================================================
+@for $i from 1 through 7 {
+
+  .fs-#{$i} {
+    font-size: #{$i/3}rem;
+  }
+  .fw-#{$i} {
+    font-weight: #{$i}00;
+  }
+  
+}
+
+
+@mixin grid() {  
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;    
+}
