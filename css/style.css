@@ -579,6 +579,10 @@ html {
   font-weight: 700;
 }
 
+.shadow {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
 .hero {
   background-repeat: no-repeat;
   background-position: top;
@@ -605,11 +609,6 @@ html {
   width: 7rem;
   height: auto;
 }
-.hero .hero-content p {
-  max-width: 90%;
-  margin: auto;
-  font-size: 0.9rem;
-}
 @media (min-width: 768px) {
   .hero .hero-content {
     display: grid;
@@ -623,9 +622,6 @@ html {
   .hero .hero-content .content h2 {
     font-size: 1.4rem;
   }
-  .hero .hero-content .content p {
-    margin: 0;
-  }
   .hero .hero-content img {
     grid-column: 7/13;
   }
@@ -637,8 +633,82 @@ html {
   .hero .hero-content .content h2 {
     font-size: 1.7rem;
   }
-  .hero .hero-content .content p {
+}
+
+p {
+  max-width: 90%;
+  margin: auto;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+@media (min-width: 768px) {
+  p {
+    margin: 0;
+  }
+}
+@media (min-width: 1024px) {
+  p {
     max-width: 100%;
+  }
+}
+main .one .flex,
+main .two .flex,
+main .three .flex {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+main .one .flex img,
+main .two .flex img,
+main .three .flex img {
+  order: -1;
+}
+@media (min-width: 768px) {
+  main .one .flex,
+main .two .flex,
+main .three .flex {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+  }
+  main .one .flex .content,
+main .two .flex .content,
+main .three .flex .content {
+    grid-column: 1/7;
+    text-align: left;
+  }
+  main .one .flex .content h2,
+main .two .flex .content h2,
+main .three .flex .content h2 {
+    font-size: 1.4rem;
+  }
+  main .one .flex img,
+main .two .flex img,
+main .three .flex img {
+    grid-column: 7/13;
+    order: 0;
+  }
+}
+@media (min-width: 1024px) {
+  main .one .flex .content,
+main .two .flex .content,
+main .three .flex .content {
+    grid-column: 1/6;
+  }
+  main .one .flex .content h2,
+main .two .flex .content h2,
+main .three .flex .content h2 {
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 768px) {
+  main .two .flex .content {
+    grid-column: 7/13;
+  }
+  main .two .flex img {
+    grid-column: 1/7;
+    order: -1;
   }
 }
 

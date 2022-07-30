@@ -1,0 +1,36 @@
+main {
+  .one .flex,
+  .two .flex,
+  .three .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    img{
+      order: -1;
+    }
+    @media (min-width:768px) {      
+      @include grid();
+      .content{
+        grid-column: 1/7;
+        text-align: left;
+        h2{font-size: 1.4rem;}
+      }
+      img{grid-column: 7/13;order:0}
+    }
+    @media (min-width:1024px) {
+      .content{
+        grid-column: 1/6;
+        h2{font-size: 1.7rem;}
+      }
+    }
+  }
+
+  .two .flex{
+    @media (min-width:768px) {      
+      .content{
+        grid-column: 7/13;
+      }
+      img{grid-column: 1/7;order:-1}
+    }
+  }
+}
