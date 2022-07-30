@@ -11,11 +11,9 @@ $neutral-light-gray: hsl(0, 0%, 98%);
 
 
 .copyright{
-  @include bg-color($primary-cyan);
   padding: 1rem;
   text-align: center;
   background-color:darken($color:  $neutral-dark-blue, $amount: 10);
   font-size: .85rem;
-  
   a{color: $primary-red;}
 }
